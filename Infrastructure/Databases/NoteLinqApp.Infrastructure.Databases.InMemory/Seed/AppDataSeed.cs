@@ -24,7 +24,7 @@ namespace NoteLinqApp.Infrastructure.Databases.InMemory
         {
 
             var userManager = provider.GetRequiredService<UserManager<Account>>();
-
+           
             var account = new Account()
             {
                 Name = "NorLinq Huzaifa",
@@ -32,36 +32,40 @@ namespace NoteLinqApp.Infrastructure.Databases.InMemory
                 Email = "huzaifa@norlinq.com.",
             };
 
-            Account? one = await userManager.FindByNameAsync(account.UserName);
-            if(one is null)
-              await userManager.CreateAsync(account, "huzaifa");
+            await CreateUser(userManager, account);
 
 
-            var account = new Account()
+            account = new Account()
             {
                 Name = "NorLinq User",
                 UserName = "user",
                 Email = "user@norlinq.com.",
             };
 
-            Account? one = await userManager.FindByNameAsync(account.UserName);
-            if (one is null)
-                await userManager.CreateAsync(account, "user");
+            await CreateUser(userManager, account);
 
+          
 
-            var account = new Account()
+             account = new Account()
             {
                 Name = "NorLinq Bjarni",
                 UserName = "bjarni",
                 Email = "bjarni@norlinq.com.",
             };
 
-            Account? one = await userManager.FindByNameAsync(account.UserName);
-            if (one is null)
-                await userManager.CreateAsync(account, "bjarni");
+            await CreateUser(userManager, account);
+
 
 
             return context;
+        }
+
+        private static async Task CreateUser(UserManager<Account> userManager, Account account)
+        {
+          
+          var  one = await userManager.FindByNameAsync(account.UserName);
+            if (one is null)
+                await userManager.CreateAsync(account, "huzaifa");
         }
     }
 }
