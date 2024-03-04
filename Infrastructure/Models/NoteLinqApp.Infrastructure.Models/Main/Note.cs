@@ -25,6 +25,9 @@ namespace NoteLinqApp.Infrastructure.Models
         public string? Body { get; set; }
 
 
+        /// <summary>
+        /// Note: in-memory there is no validation on relationship ..this will allow to enter any value
+        /// </summary>
         public Guid? ClassificationId { get; set; }
         public Classification Classification { get; set; }
 

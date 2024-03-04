@@ -49,7 +49,11 @@ builder.Services.AddIdentity<Account, IdentityRole<Guid>>(options =>
 // for more: https://github.com/MhozaifaA/Meteors.DependencyInjection.AutoService
 builder.Services.AddAutoService(BoundedContextServicesMainAssembly.Assembly,
     BoundedContextRepositoriesSecurityAssembly.Assembly);
-	
+
+builder.Services.AddMrRepository((e) =>
+{
+   // e.OrderBy((nameof(IBaseEntity<Guid>.DateCreated))); //global indexing...this notwork with inmemory
+});
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
