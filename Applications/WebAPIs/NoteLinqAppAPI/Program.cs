@@ -44,6 +44,9 @@ builder.Services.AddIdentity<Account, IdentityRole<Guid>>(options =>
 
 
 
+// for more: https://github.com/MhozaifaA/Meteors.DependencyInjection.AutoService
+builder.Services.AddAutoService(BoundedContextRepositoriesSecurityAssembly.Assembly);
+	
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
