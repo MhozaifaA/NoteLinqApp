@@ -1,8 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
+using NoteLinqApp.Infrastructure.Databases.InMemory;
 using Meteors.AspNetCore.Domain.ConfigureServices;
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using NoteLinqApp.Infrastructure.Models;
 using Meteors.AspNetCore.Service.DependencyInjection;
 using Meteors.AspNetCore.Infrastructure.ModelEntity.Interface;
 using Meteors.AspNetCore.Service.Options;
@@ -16,6 +18,31 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+
+
+builder.Services.AddMrDbContext<NoteLinqAppInMemoryDbContext>(
+(options) =>
+{
+    //usesqlserver
+    options.UseInMemoryDatabase("NoteLinqAppDB");
+});
+
+
+
+
+builder.Services.AddIdentity<Account, IdentityRole<Guid>>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+    options.Password.RequiredLength = 4;
+    options.Password.RequiredUniqueChars = 0;
+    options.Password.RequireDigit = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+}).AddEntityFrameworkStores<NoteLinqAppInMemoryDbContext>().AddDefaultTokenProviders().AddRoles<IdentityRole<Guid>>();
+
+
 
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
@@ -80,6 +107,14 @@ app.UseCors(b =>
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+app.UseDbContextSeed<NoteLinqAppInMemoryDbContext>(async (context, provider) =>
+{
+    await context.AccountsSeedAsync(provider);
+
+    app.DisposeDbContextSeed();
+});
 
 
 app.Run();
