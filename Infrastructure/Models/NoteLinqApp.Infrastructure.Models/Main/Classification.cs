@@ -23,6 +23,7 @@ namespace NoteLinqApp.Infrastructure.Models
         [ColumnDataType(DataBaseTypes.NVARCHAR, TypeConstants.LongNounString)]
         public required string Name { get; set; }
 
+        [ColumnDataType(DataBaseTypes.TINYINT)]
         public Colors Color { get; set; }
 
         //[Required]
