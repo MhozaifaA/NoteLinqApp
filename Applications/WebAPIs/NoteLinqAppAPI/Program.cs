@@ -5,9 +5,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using NoteLinqApp.Infrastructure.Models;
+using NoteLinqApp.BoundedContext.Repositories.Security;
 using Meteors.AspNetCore.Service.DependencyInjection;
 using Meteors.AspNetCore.Infrastructure.ModelEntity.Interface;
 using Meteors.AspNetCore.Service.Options;
+using NoteLinqApp.BoundedContext.Services.Main;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -45,7 +47,8 @@ builder.Services.AddIdentity<Account, IdentityRole<Guid>>(options =>
 
 
 // for more: https://github.com/MhozaifaA/Meteors.DependencyInjection.AutoService
-builder.Services.AddAutoService(BoundedContextRepositoriesSecurityAssembly.Assembly);
+builder.Services.AddAutoService(BoundedContextServicesMainAssembly.Assembly,
+    BoundedContextRepositoriesSecurityAssembly.Assembly);
 	
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
