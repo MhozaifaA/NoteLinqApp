@@ -65,7 +65,7 @@ namespace NoteLinqApp.Infrastructure.Databases.InMemory
           
           var  one = await userManager.FindByNameAsync(account.UserName);
             if (one is null)
-                await userManager.CreateAsync(account, "huzaifa");
+                await userManager.CreateAsync(account, account.UserName);
         }
     }
 }
