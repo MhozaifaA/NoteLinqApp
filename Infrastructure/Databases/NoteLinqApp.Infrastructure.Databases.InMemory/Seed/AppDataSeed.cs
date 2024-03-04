@@ -27,14 +27,38 @@ namespace NoteLinqApp.Infrastructure.Databases.InMemory
 
             var account = new Account()
             {
+                Name = "NorLinq Huzaifa",
+                UserName = "huzaifa",
+                Email = "huzaifa@norlinq.com.",
+            };
+
+            Account? one = await userManager.FindByNameAsync(account.UserName);
+            if(one is null)
+              await userManager.CreateAsync(account, "huzaifa");
+
+
+            var account = new Account()
+            {
                 Name = "NorLinq User",
                 UserName = "user",
                 Email = "user@norlinq.com.",
             };
 
             Account? one = await userManager.FindByNameAsync(account.UserName);
-            if(one is null)
-              await userManager.CreateAsync(account, "user");
+            if (one is null)
+                await userManager.CreateAsync(account, "user");
+
+
+            var account = new Account()
+            {
+                Name = "NorLinq Bjarni",
+                UserName = "bjarni",
+                Email = "bjarni@norlinq.com.",
+            };
+
+            Account? one = await userManager.FindByNameAsync(account.UserName);
+            if (one is null)
+                await userManager.CreateAsync(account, "bjarni");
 
 
             return context;
