@@ -71,6 +71,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NoteLinqApp", "Applications
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61477"
+		SlnRelativePath = "Applications\Presentation\NoteLinqApp\"
 	EndProjectSection
 EndProject
 Global
