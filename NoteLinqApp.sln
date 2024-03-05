@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B2D34A00-2A17-498B-A886-5028383E4BDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.Infrastructure.Models", "Infrastructure\Models\NoteLinqApp.Infrastructure.Models\NoteLinqApp.Infrastructure.Models.csproj", "{A8E9FF80-5B6C-453B-9487-368814CDA96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.Infrastructure.Models", "Infrastructure\Models\NoteLinqApp.Infrastructure.Models\NoteLinqApp.Infrastructure.Models.csproj", "{A8E9FF80-5B6C-453B-9487-368814CDA96E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.Infrastructure.Databases.InMemory", "Infrastructure\Databases\NoteLinqApp.Infrastructure.Databases.InMemory\NoteLinqApp.Infrastructure.Databases.InMemory.csproj", "{0D6E8161-99ED-454E-860E-2216D13DFE98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.Infrastructure.Databases.InMemory", "Infrastructure\Databases\NoteLinqApp.Infrastructure.Databases.InMemory\NoteLinqApp.Infrastructure.Databases.InMemory.csproj", "{0D6E8161-99ED-454E-860E-2216D13DFE98}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{4A0D7E8E-2782-4872-A81D-CC33C0B1A40C}"
 EndProject
@@ -29,11 +29,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPIs", "WebAPIs", "{4E08D2CD-6BC3-4C75-A9D8-158861C9E00F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqAppAPI", "Applications\WebAPIs\NoteLinqAppAPI\NoteLinqAppAPI.csproj", "{F0356DD3-85A3-4727-8208-9822D313061F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqAppAPI", "Applications\WebAPIs\NoteLinqAppAPI\NoteLinqAppAPI.csproj", "{F0356DD3-85A3-4727-8208-9822D313061F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D7CE1582-3575-43AC-AFD2-6D48150A5A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.Core", "Core\NoteLinqApp.Core\NoteLinqApp.Core.csproj", "{F01EAD0C-5296-43BD-BE05-DADD9AB2C45E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.Core", "Core\NoteLinqApp.Core\NoteLinqApp.Core.csproj", "{F01EAD0C-5296-43BD-BE05-DADD9AB2C45E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E056C128-2E62-41DD-89B0-80B33CDCD5AC}"
 EndProject
@@ -43,15 +43,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataTransfer", "DataTransfe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{60665D75-C457-4713-B7D9-A4D40CD334A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.BoundedContext.DataTransferObjects", "BoundedContext\DataTransfer\NoteLinqApp.BoundedContext.DataTransferObjects\NoteLinqApp.BoundedContext.DataTransferObjects.csproj", "{EA23C157-BA70-4A2B-B869-F12728F6154B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.BoundedContext.DataTransferObjects", "BoundedContext\DataTransfer\NoteLinqApp.BoundedContext.DataTransferObjects\NoteLinqApp.BoundedContext.DataTransferObjects.csproj", "{EA23C157-BA70-4A2B-B869-F12728F6154B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.Domain", "Domain\NoteLinqApp.Domain\NoteLinqApp.Domain.csproj", "{2E92E5B5-0B2C-4058-AFCD-B7EDF55B9898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.Domain", "Domain\NoteLinqApp.Domain\NoteLinqApp.Domain.csproj", "{2E92E5B5-0B2C-4058-AFCD-B7EDF55B9898}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9D328C1F-E0EE-4CD5-8828-2336DE012586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.BoundedContext.Repositories.Security", "BoundedContext\Repositories\NoteLinqApp.BoundedContext.Repositories.Security\NoteLinqApp.BoundedContext.Repositories.Security.csproj", "{38FE6349-8A0B-458B-A386-D846A0FAA629}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.BoundedContext.Repositories.Security", "BoundedContext\Repositories\NoteLinqApp.BoundedContext.Repositories.Security\NoteLinqApp.BoundedContext.Repositories.Security.csproj", "{38FE6349-8A0B-458B-A386-D846A0FAA629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLinqApp.BoundedContext.Services.Main", "BoundedContext\Services\NoteLinqApp.BoundedContext.Services.Main\NoteLinqApp.BoundedContext.Services.Main.csproj", "{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteLinqApp.BoundedContext.Services.Main", "BoundedContext\Services\NoteLinqApp.BoundedContext.Services.Main\NoteLinqApp.BoundedContext.Services.Main.csproj", "{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NoteLinqApp", "Applications\Presentation\NoteLinqApp\", "{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61477"
+		Debug.AspNetCompiler.PhysicalPath = "Applications\Presentation\NoteLinqApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61477\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61477"
+		Release.AspNetCompiler.PhysicalPath = "Applications\Presentation\NoteLinqApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61477\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61477"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +115,10 @@ Global
 		{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +141,7 @@ Global
 		{9D328C1F-E0EE-4CD5-8828-2336DE012586} = {9B86235C-4F3F-4BB1-98FB-FB57EF60195F}
 		{38FE6349-8A0B-458B-A386-D846A0FAA629} = {60665D75-C457-4713-B7D9-A4D40CD334A9}
 		{48AAE63B-F7E5-469A-9C4B-3AD0924D17E8} = {9D328C1F-E0EE-4CD5-8828-2336DE012586}
+		{8D4EF7D3-2E29-49BF-9574-7352B6CC25E2} = {0490F3D8-4EC3-4DFB-8C3A-5BB3360B52B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA8C3F0B-218C-4F39-9EB5-BCDFF1A25AE9}
